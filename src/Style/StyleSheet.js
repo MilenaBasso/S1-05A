@@ -1,28 +1,25 @@
-import { StyleSheet} from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
+  container: {
+    flex: 1,
+  },
 
-    secondaryContainer: {
-        flex: 1,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+  secondaryContainer: {
+    flex: 1,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
-    },
+  img: {
+    width: "100%",
+    height: "100%",
+  },
 
-    img: { 
-        width: '100%',
-        height: '100%'
-    },
-
-    inputName: {
-        backgroundColor: 'white',
-        borderColor: 'black',
-        borderWidth: 2,
-
-    }
-    
-})
+  inputName: {
+    backgroundColor: "white",
+    borderColor: "black",
+    borderWidth: 2,
+  },
+});

@@ -1,42 +1,47 @@
-import { StyleSheet, Text, View, TextInput, ImageBackground, Image, Button } from 'react-native';
-import { styles } from '../../Style/StyleSheet';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  ImageBackground,
+  Image,
+  Button,
+} from "react-native";
+import { styles } from "../../Style/StyleSheet";
 
 export default function Body() {
+  pressButon = () => {
+    alert("abc");
+  };
 
-    pressButon = () => {
-        alert("abc")
-    }
+  return (
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../images/fundo.jpg")}
+        style={styles.img}
+      >
 
-    return (
-        <View style={styles.container}>
+    /* Caixa de nome do usuário */
+        <View style={styles.secondaryContainer}>
+          <TextInput
+            style={styles.inputName}
+            placeholder="User"
+            inputMode="text"
+            placeholderTextColor="brown"
+          />
 
-            <ImageBackground
-                source={require('../images/fundo.jpg')}
-                style={styles.img}>
+    /*Caixa de senha do login*/
+          <TextInput
+            style={styles.inputName}
+            placeholder="PassWord"
+            inputMode="numeric"
+            secureTextEntry={true}
+            placeholderTextColor="brown"
+          />
 
-                <View style={styles.secondaryContainer}>
-
-                    <TextInput style={styles.inputName}
-                        placeholder='User'
-                        inputMode='text'
-                        placeholderTextColor='red'
-                    />
-
-                    <TextInput style={styles.inputName}
-                        placeholder='PassWord'
-                        inputMode='numeric'
-                        secureTextEntry={true}
-                        placeholderTextColor='red'
-                    />
-
-                    <Button
-                    onPress={pressButon}
-                    title= 'Click Me!!'
-                    color= 'red'
-                    />
-            
-                </View>
-            </ImageBackground>
+          <Button onPress={pressButon} title="Click Me!!" color="brown" />
         </View>
-    );
+      </ImageBackground>
+    </View>
+  );
 }
